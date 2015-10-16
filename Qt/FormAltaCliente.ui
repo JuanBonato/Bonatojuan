@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form_Alta_Cliente</class>
+ <widget class="QDialog" name="Form_Alta_Cliente">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>270</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>270</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>300</width>
+    <height>270</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Clientes - Alta</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <widget class="QLineEdit" name="lineEdit_Apellido">
+   <property name="geometry">
+    <rect>
+     <x>105</x>
+     <y>75</y>
+     <width>150</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>20</number>
+   </property>
+   <property name="placeholderText">
+    <string>Máximo 20 Caracteres</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_DNI">
+   <property name="geometry">
+    <rect>
+     <x>105</x>
+     <y>105</y>
+     <width>150</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>8 Dígitos</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_Aceptar">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>235</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Aceptar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Apellido">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>78</y>
+     <width>46</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Apellido</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_Cancelar">
+   <property name="geometry">
+    <rect>
+     <x>215</x>
+     <y>235</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Telefono">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>139</y>
+     <width>46</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Telefono</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_Direccion">
+   <property name="geometry">
+    <rect>
+     <x>105</x>
+     <y>165</y>
+     <width>150</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Máximo 30 Caracteres</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_Telefono">
+   <property name="geometry">
+    <rect>
+     <x>105</x>
+     <y>135</y>
+     <width>150</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>15 Digitos Sin Guiones</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Nombre">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>46</y>
+     <width>46</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nombre</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_DNI">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>108</y>
+     <width>46</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DNI</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_Nombre">
+   <property name="geometry">
+    <rect>
+     <x>105</x>
+     <y>43</y>
+     <width>150</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>20</number>
+   </property>
+   <property name="placeholderText">
+    <string>Máximo 20 Caracteres</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Direccion">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>46</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Direccion</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>lineEdit_Nombre</tabstop>
+  <tabstop>lineEdit_Apellido</tabstop>
+  <tabstop>lineEdit_DNI</tabstop>
+  <tabstop>lineEdit_Telefono</tabstop>
+  <tabstop>lineEdit_Direccion</tabstop>
+  <tabstop>pb_Aceptar</tabstop>
+  <tabstop>pb_Cancelar</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pb_Cancelar</sender>
+   <signal>clicked()</signal>
+   <receiver>Form_Alta_Cliente</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>174</x>
+     <y>144</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
