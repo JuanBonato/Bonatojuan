@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'FormAltaPaseador.ui'
 #
-# Created: Fri Oct 16 11:57:49 2015
+# Created: Thu Oct 22 09:12:32 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,11 +26,11 @@ except AttributeError:
 class Ui_Form_Alta_Paseador(object):
     def setupUi(self, Form_Alta_Paseador):
         Form_Alta_Paseador.setObjectName(_fromUtf8("Form_Alta_Paseador"))
-        Form_Alta_Paseador.setWindowModality(QtCore.Qt.WindowModal)
+        Form_Alta_Paseador.setWindowModality(QtCore.Qt.NonModal)
         Form_Alta_Paseador.resize(300, 270)
         Form_Alta_Paseador.setMinimumSize(QtCore.QSize(300, 270))
         Form_Alta_Paseador.setMaximumSize(QtCore.QSize(300, 270))
-        Form_Alta_Paseador.setModal(True)
+        Form_Alta_Paseador.setModal(False)
         self.lineEdit_Apellido = QtGui.QLineEdit(Form_Alta_Paseador)
         self.lineEdit_Apellido.setGeometry(QtCore.QRect(110, 82, 150, 22))
         self.lineEdit_Apellido.setObjectName(_fromUtf8("lineEdit_Apellido"))

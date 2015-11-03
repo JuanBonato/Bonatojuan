@@ -3,7 +3,7 @@
  <class>Form_Alta_Mascota</class>
  <widget class="QDialog" name="Form_Alta_Mascota">
   <property name="windowModality">
-   <enum>Qt::WindowModal</enum>
+   <enum>Qt::NonModal</enum>
   </property>
   <property name="geometry">
    <rect>
@@ -29,7 +29,7 @@
    <string>Mascotas - Alta</string>
   </property>
   <property name="modal">
-   <bool>true</bool>
+   <bool>false</bool>
   </property>
   <widget class="QLineEdit" name="lineEdit_Raza">
    <property name="geometry">
@@ -195,6 +195,8 @@
  <tabstops>
   <tabstop>lineEdit_Nombre</tabstop>
   <tabstop>lineEdit_Raza</tabstop>
+  <tabstop>spinBox_Peso</tabstop>
+  <tabstop>combo_Duenio</tabstop>
   <tabstop>pb_Aceptar</tabstop>
   <tabstop>pb_Cancelar</tabstop>
  </tabstops>

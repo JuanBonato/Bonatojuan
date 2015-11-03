@@ -3,13 +3,13 @@
 class Cliente():
     "Crear nuevo cliente"
     
-    def __init__(self,Apellido,Nombre,DNI,Telefono,Direccion):
+    def __init__(self, apellido, nombre, dni, telefono, direccion):
        
-       self.__apellido = Apellido
-       self.__nombre = Nombre
-       self.__dni = DNI 
-       self.__telefono = Telefono
-       self.__direccion = Direccion
+       self.__apellido = apellido
+       self.__nombre = nombre
+       self.__dni = dni 
+       self.__telefono = telefono
+       self.__direccion = direccion
        
     def get_Apellido(self):
         "Retorna el Apellido del Cliente"

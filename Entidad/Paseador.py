@@ -8,34 +8,34 @@ class Paseador():
        self.__dni = DNI 
        self.__telefono = Telefono
        
-    def GetApellido(self):
+    def get_Apellido(self):
         "Retorna el Apellido del Paseador"
         return self.__apellido
         
-    def GetNombre(self):
+    def get_Nombre(self):
         "Retorna el Nombre del Paseador"        
         return self.__nombre
     
-    def GetDni(self):
+    def get_Dni(self):
         "Retorna el DNI del Paseador"
         return self.__dni
     
-    def GetTelefono(self):
+    def get_Telefono(self):
         "Retorna el Telefono del Paseador"
         return self.__telefono
         
-    def SetApellido(self,apellido):
+    def set_Apellido(self,apellido):
         "Establecer el Apellido del Paseador"
         self.__apellido = apellido
         
-    def SetNombre(self,nombre):
+    def set_Nombre(self,nombre):
         "Establecer el Nombre del Paseador"        
         self.__nombre = nombre
         
-    def SetDni(self,dni):
+    def set_Dni(self,dni):
         "Establecer el DNI del Paseador"
         self.__dni = dni
         
-    def SetTelefono(self,telefono):
+    def set_Telefono(self,telefono):
         "Establecer el Telefono del Paseador"
         self.__telefono = telefono

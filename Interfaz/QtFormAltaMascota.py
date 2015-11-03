@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'FormAltaMascota.ui'
 #
-# Created: Fri Oct 16 15:32:07 2015
+# Created: Thu Oct 22 09:12:32 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,11 +26,11 @@ except AttributeError:
 class Ui_Form_Alta_Mascota(object):
     def setupUi(self, Form_Alta_Mascota):
         Form_Alta_Mascota.setObjectName(_fromUtf8("Form_Alta_Mascota"))
-        Form_Alta_Mascota.setWindowModality(QtCore.Qt.WindowModal)
+        Form_Alta_Mascota.setWindowModality(QtCore.Qt.NonModal)
         Form_Alta_Mascota.resize(300, 270)
         Form_Alta_Mascota.setMinimumSize(QtCore.QSize(300, 270))
         Form_Alta_Mascota.setMaximumSize(QtCore.QSize(300, 270))
-        Form_Alta_Mascota.setModal(True)
+        Form_Alta_Mascota.setModal(False)
         self.lineEdit_Raza = QtGui.QLineEdit(Form_Alta_Mascota)
         self.lineEdit_Raza.setGeometry(QtCore.QRect(110, 82, 150, 22))
         self.lineEdit_Raza.setMaxLength(20)
@@ -78,7 +78,9 @@ class Ui_Form_Alta_Mascota(object):
         QtCore.QObject.connect(self.pb_Cancelar, QtCore.SIGNAL(_fromUtf8("clicked()")), Form_Alta_Mascota.close)
         QtCore.QMetaObject.connectSlotsByName(Form_Alta_Mascota)
         Form_Alta_Mascota.setTabOrder(self.lineEdit_Nombre, self.lineEdit_Raza)
-        Form_Alta_Mascota.setTabOrder(self.lineEdit_Raza, self.pb_Aceptar)
+        Form_Alta_Mascota.setTabOrder(self.lineEdit_Raza, self.spinBox_Peso)
+        Form_Alta_Mascota.setTabOrder(self.spinBox_Peso, self.combo_Duenio)
+        Form_Alta_Mascota.setTabOrder(self.combo_Duenio, self.pb_Aceptar)
         Form_Alta_Mascota.setTabOrder(self.pb_Aceptar, self.pb_Cancelar)
 
     def retranslateUi(self, Form_Alta_Mascota):

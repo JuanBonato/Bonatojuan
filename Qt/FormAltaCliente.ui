@@ -3,7 +3,7 @@
  <class>Form_Alta_Cliente</class>
  <widget class="QDialog" name="Form_Alta_Cliente">
   <property name="windowModality">
-   <enum>Qt::WindowModal</enum>
+   <enum>Qt::NonModal</enum>
   </property>
   <property name="geometry">
    <rect>
@@ -29,13 +29,13 @@
    <string>Clientes - Alta</string>
   </property>
   <property name="modal">
-   <bool>true</bool>
+   <bool>false</bool>
   </property>
   <widget class="QLineEdit" name="lineEdit_Apellido">
    <property name="geometry">
     <rect>
      <x>105</x>
-     <y>75</y>
+     <y>65</y>
      <width>150</width>
      <height>22</height>
     </rect>
@@ -51,7 +51,7 @@
    <property name="geometry">
     <rect>
      <x>105</x>
-     <y>105</y>
+     <y>95</y>
      <width>150</width>
      <height>22</height>
     </rect>
@@ -77,7 +77,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>78</y>
+     <y>68</y>
      <width>46</width>
      <height>15</height>
     </rect>
@@ -103,7 +103,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>139</y>
+     <y>129</y>
      <width>46</width>
      <height>15</height>
     </rect>
@@ -116,7 +116,7 @@
    <property name="geometry">
     <rect>
      <x>105</x>
-     <y>165</y>
+     <y>155</y>
      <width>150</width>
      <height>22</height>
     </rect>
@@ -129,7 +129,7 @@
    <property name="geometry">
     <rect>
      <x>105</x>
-     <y>135</y>
+     <y>125</y>
      <width>150</width>
      <height>22</height>
     </rect>
@@ -142,7 +142,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>46</y>
+     <y>36</y>
      <width>46</width>
      <height>15</height>
     </rect>
@@ -155,7 +155,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>108</y>
+     <y>98</y>
      <width>46</width>
      <height>15</height>
     </rect>
@@ -168,7 +168,7 @@
    <property name="geometry">
     <rect>
      <x>105</x>
-     <y>43</y>
+     <y>33</y>
      <width>150</width>
      <height>22</height>
     </rect>
@@ -184,13 +184,66 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>170</y>
+     <y>160</y>
      <width>46</width>
      <height>15</height>
     </rect>
    </property>
    <property name="text">
     <string>Direccion</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Mascotas">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>190</y>
+     <width>46</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mascotas</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="combo_Mascotas">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>105</x>
+     <y>186</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_Add_Mascota">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>225</x>
+     <y>186</y>
+     <width>30</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>8</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+    </font>
+   </property>
+   <property name="text">
+    <string>+</string>
    </property>
   </widget>
  </widget>
@@ -200,8 +253,10 @@
   <tabstop>lineEdit_DNI</tabstop>
   <tabstop>lineEdit_Telefono</tabstop>
   <tabstop>lineEdit_Direccion</tabstop>
+  <tabstop>pb_Add_Mascota</tabstop>
   <tabstop>pb_Aceptar</tabstop>
   <tabstop>pb_Cancelar</tabstop>
+  <tabstop>combo_Mascotas</tabstop>
  </tabstops>
  <resources/>
  <connections>

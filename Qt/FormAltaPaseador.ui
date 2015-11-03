@@ -3,7 +3,7 @@
  <class>Form_Alta_Paseador</class>
  <widget class="QDialog" name="Form_Alta_Paseador">
   <property name="windowModality">
-   <enum>Qt::WindowModal</enum>
+   <enum>Qt::NonModal</enum>
   </property>
   <property name="geometry">
    <rect>
@@ -29,7 +29,7 @@
    <string>Paseadores - Alta</string>
   </property>
   <property name="modal">
-   <bool>true</bool>
+   <bool>false</bool>
   </property>
   <widget class="QLineEdit" name="lineEdit_Apellido">
    <property name="geometry">

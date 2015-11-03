@@ -27,25 +27,6 @@
      <string>Arribo</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pb_Eliminar">
-    <property name="geometry">
-     <rect>
-      <x>285</x>
-      <y>480</y>
-      <width>75</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Eliminar</string>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pb_Salida">
     <property name="geometry">
      <rect>
@@ -72,7 +53,7 @@
      <string>Salir</string>
     </property>
    </widget>
-   <widget class="QTabWidget" name="tabWidget">
+   <widget class="QTabWidget" name="tab_Paseos">
     <property name="geometry">
      <rect>
       <x>11</x>
@@ -94,7 +75,7 @@
      <attribute name="title">
       <string>Paseadores Activos</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="table_Activos">
       <property name="geometry">
        <rect>
         <x>-1</x>
@@ -157,13 +138,21 @@
         <set>AlignHCenter|AlignVCenter|AlignCenter</set>
        </property>
       </column>
+      <column>
+       <property name="text">
+        <string>Codigo</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+       </property>
+      </column>
      </widget>
     </widget>
-    <widget class="QWidget" name="tabPaseosProgramados">
+    <widget class="QWidget" name="tabHistorialPaseos">
      <attribute name="title">
-      <string>Paseos Programados</string>
+      <string>Historial Paseos</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_2">
+     <widget class="QTableWidget" name="table_Historial">
       <property name="geometry">
        <rect>
         <x>-1</x>
@@ -234,21 +223,16 @@
         <set>AlignHCenter|AlignVCenter|AlignCenter</set>
        </property>
       </column>
+      <column>
+       <property name="text">
+        <string>Codigo</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+       </property>
+      </column>
      </widget>
     </widget>
-   </widget>
-   <widget class="QPushButton" name="pb_Nuevo">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>480</y>
-      <width>75</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Nuevo</string>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -264,6 +248,8 @@
     <property name="title">
      <string>Menu</string>
     </property>
+    <addaction name="actionConfiguracion"/>
+    <addaction name="separator"/>
     <addaction name="actionSalir"/>
    </widget>
    <widget class="QMenu" name="menuClientes">
@@ -271,7 +257,6 @@
      <string>Clientes</string>
     </property>
     <addaction name="actionAltaCliente"/>
-    <addaction name="actionModificarCliente"/>
     <addaction name="separator"/>
     <addaction name="actionListadoCliente"/>
    </widget>
@@ -280,7 +265,6 @@
      <string>Mascotas</string>
     </property>
     <addaction name="actionAltaMascota"/>
-    <addaction name="actionModificarMascota"/>
     <addaction name="separator"/>
     <addaction name="actionListadoMascota"/>
    </widget>
@@ -289,7 +273,6 @@
      <string>Paseadores</string>
     </property>
     <addaction name="actionAltaPaseador"/>
-    <addaction name="actionModificarPaseador"/>
     <addaction name="separator"/>
     <addaction name="actionListadoPaseador"/>
    </widget>
@@ -307,20 +290,12 @@
     <string>F1</string>
    </property>
   </action>
-  <action name="actionModificarCliente">
-   <property name="text">
-    <string>Modificacion</string>
-   </property>
-   <property name="shortcut">
-    <string>F4</string>
-   </property>
-  </action>
   <action name="actionListadoCliente">
    <property name="text">
     <string>Listado</string>
    </property>
    <property name="shortcut">
-    <string>F7</string>
+    <string>F4</string>
    </property>
   </action>
   <action name="actionAltaMascota">
@@ -331,20 +306,12 @@
     <string>F2</string>
    </property>
   </action>
-  <action name="actionModificarMascota">
-   <property name="text">
-    <string>Modificacion</string>
-   </property>
-   <property name="shortcut">
-    <string>F5</string>
-   </property>
-  </action>
   <action name="actionListadoMascota">
    <property name="text">
     <string>Listado</string>
    </property>
    <property name="shortcut">
-    <string>F8</string>
+    <string>F5</string>
    </property>
   </action>
   <action name="actionAltaPaseador">
@@ -355,25 +322,28 @@
     <string>F3</string>
    </property>
   </action>
-  <action name="actionModificarPaseador">
-   <property name="text">
-    <string>Modificacion</string>
-   </property>
-   <property name="shortcut">
-    <string>F6</string>
-   </property>
-  </action>
   <action name="actionListadoPaseador">
    <property name="text">
     <string>Listado</string>
    </property>
    <property name="shortcut">
-    <string>F9</string>
+    <string>F6</string>
    </property>
   </action>
   <action name="actionSalir">
    <property name="text">
     <string>Salir</string>
+   </property>
+   <property name="shortcut">
+    <string>F9</string>
+   </property>
+  </action>
+  <action name="actionConfiguracion">
+   <property name="text">
+    <string>Configuracion</string>
+   </property>
+   <property name="shortcut">
+    <string>F7</string>
    </property>
   </action>
  </widget>
@@ -388,6 +358,22 @@
     <hint type="sourcelabel">
      <x>747</x>
      <y>512</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSalir</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
      <x>399</x>
